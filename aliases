@@ -1,2 +1,2 @@
-alias clipboard='tr -d "[:space:]" | xclip -selection clipboard -i'
-PATH="$HOME/.local/bin:$PATH"
+echo "alias clipboard='tr -d "[:space:]" | xclip -selection clipboard -i'" >> ~/.bashrc
+echo 'PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
