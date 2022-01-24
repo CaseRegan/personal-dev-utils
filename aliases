@@ -1,0 +1,2 @@
+alias clipboard='tr -d "[:space:]" | xclip -selection clipboard -i'
+PATH="$HOME/.local/bin:$PATH"

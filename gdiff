@@ -1,0 +1,20 @@
+#!/bin/bash
+
+flags=""
+
+while getopts ":nr:" opt; do
+  case $opt in
+    n)
+     flags="$flags --name-only"
+     ;;
+    r)
+     flags="$flags HEAD^$OPTARG"
+     ;;
+    \?)
+      echo "Invalid option: -$OPTARG" >&2
+      exit 1;;
+  esac
+done
+
+git diff $flags origin/master
+exit 0
